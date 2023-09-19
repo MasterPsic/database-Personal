@@ -58,4 +58,23 @@ class Metodo():
             empleado = None
         return empleado
     
-    #def eliminar(self empleado)
+    # Sugerido: def eliminar(self empleado)
+class Metodo():
+    # ... (otras funciones)
+
+    def eliminar(self):
+        print('Eliminar Empleado')
+        dniCorrecto = False
+        while not dniCorrecto:
+            dni = input('Ingrese el DNI del empleado a eliminar: ')
+            if len(dni) == 8 and dni.isdigit():
+                dniCorrecto = True
+            else:
+                print('DNI inválido. Debe contener 8 dígitos numéricos.')
+
+        confirmacion = input('¿Está seguro de que desea eliminar al empleado? (S/N): ')
+        if confirmacion.upper() == 'S':
+            return dni  # Devolvemos el DNI para que la función de eliminación lo use
+        else:
+            print('Operación de eliminación cancelada.')
+            return None

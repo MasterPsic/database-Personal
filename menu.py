@@ -63,10 +63,22 @@ class Menu():
                   print('Error')
         
 
-        elif opcion == 4:
+        elif opcion == 7:
             try:
-            print("Eliminar")
-        elif opcion == 6:
+        empleado = generico.listar()
+        if len(empleado) > 0:
+            metodo.listarE(empleado)
+            dni_a_eliminar = metodo.eliminar()
+            if dni_a_eliminar is not None:
+                generico.eliminar(dni_a_eliminar)
+                print('Empleado eliminado correctamente.')
+        else:
+            print('No hay registros de empleados.')
+    except:
+        print('Ocurrió un error al eliminar el empleado.')
+
+
+        elif opcion == 8:
             self.salir()
 
 menu = Menu()

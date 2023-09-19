@@ -55,3 +55,14 @@ class Generico():
                 except Error as ex:
                     print ('No se pudo eliminar al Empleado: {0}'.format(ex))
         
+        #codigo sugerido para Eliminar
+        def eliminar(self, dni):
+            if self.conexion.is_connected():
+                try:
+                    cur = self.conexion.cursor()
+                    sql = "DELETE FROM empleado WHERE dni = '{0}'".format(dni)
+                    cur.execute(sql)
+                    self.conexion.commit()
+                    print('Empleado eliminado correctamente.')
+                except Error as ex:
+                    print('No se pudo eliminar al empleado: {0}'.format(ex))
