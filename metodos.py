@@ -48,5 +48,14 @@ class Metodo():
             if emp[0]  == dni:
                 dniExiste = True
                 break
-
-            
+        if dniExiste:
+            nombre = input('Nombre: ').title()
+            apellido = input('Apellido: ')
+            fecha = input('FechNac: ')
+            direccion= int (input('Direccion: '))
+            empleado = (dni, nombre, apellido, fecha, direccion)
+        else:
+            empleado = None
+        return empleado
+    
+    #def eliminar(self empleado)

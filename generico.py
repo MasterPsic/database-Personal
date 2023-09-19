@@ -21,6 +21,7 @@ class Generico():
                     return respuesta
                 except Error as ex:
                        print ('No se pudo concretar listar: {0}'.format(ex))
+                       
         def registrar (self, empleado):
             if self.conexion.is_connected():
                 try:
