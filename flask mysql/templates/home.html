@@ -1,25 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DBPERSONAL</title>
+    <style>
+        /* Estilos para el carrusel */
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 300px; /* Ancho del carrusel */
+            margin: 0 auto;
+        }
 
-<h1>LISTADO</h1>
-<table>
-    <thead>
-        <tr>
-            <td>DNI</td>
-            <td>NOMBRE</td>
-            <td> APELLIDO </td>
-            <td> FECH NAC: </td>
-            <TD> Direccion: </TD>
+        .carousel img {
+            width: 100%;
+            transition: transform 0.5s;
+        }
 
-        </tr>
-    </thead>
-    <tbody>
-        {% for emp in empleado %}
-        <tr>
-            <td>{{ emp.0 }}</td>
-            <td>{{ emp.1 }}</td>
-            <td>{{ emp.2 }}</td>
-            <td>{{ emp.3 }}</td>
-            <td>{{ emp.4 }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+        /* Estilos para los enlaces */
+        .social-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            font-size: 24px;
+            text-decoration: none;
+            color: #007bff; /* Color azul, puedes cambiarlo según tus preferencias */
+        }
+    </style>
+</head>
+<body>
+    <h1>File Personal</h1>
+    <!-- Carrusel de fotos -->
+    <div class="carousel">
+        <img src="imagen1.jpg" alt="Imagen 1">
+        <img src="imagen2.jpg" alt="Imagen 2">
+        <img src="imagen3.jpg" alt="Imagen 3">
+        <!-- Agrega más imágenes según sea necesario -->
+    </div>
+
+    <!-- Enlaces a redes sociales -->
+    <div class="social-links">
+        <a href="https://www.instagram.com/tu_usuario_de_instagram/" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com/tu_usuario_de_facebook/" target="_blank">Facebook</a>
+        <!-- Las URLs y los nombres de usuario según corresponda -->
+    </div>
+</body>
+</html>
